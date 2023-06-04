@@ -1,0 +1,23 @@
+<div class="card card-margin task-card project">
+    <div class="card-body">
+        <div class="centered">
+            <h2 class="card-title">{{title}}</h2>
+        </div>
+        <div class="centered">
+            {{#if is_lead}} <p><b> (Вы являетесь лидером этого проекта)</b></p>{{/if}}
+        </div>
+        <div class="centered">
+            <p class="card-text centered">Процент выполнения проекта: {{progress}}</p>
+        </div>
+        <div class="centered">
+            <p class="card-text">Предметная область проекта: {{subj_area}}</p>
+        </div>
+        <h5 id="task-text" class="card-text"></h5>
+        <flexbox id="tasks-container"> 
+            <button id="btn-add-task" class="w-100 btn btn-lg btn-primary"> Добавить новую задачу</button> 
+        </flexbox>
+    </div>
+</div>
+
+{{!-- 
+{{#if is_lead}} <button id="btn-add-task" class="w-100 btn btn-lg btn-primary"> Добавить новую задачу</button> {{/if}}    --}}

@@ -1,0 +1,21 @@
+<div class="card card-margin task-card task">
+    <div class="card-body">
+        <div class="centered">
+            <h2 class="card-title">{{title}}</h2>
+        </div>
+        <div class="centered">
+            <p class="card-text centered">Процент выполнения задачи: {{progress}}</p>
+        </div>
+        <div class="centered">
+            <p class="card-text centered">Дедлайн задачи: {{deadline}}</p>
+        </div>
+        <h5 class="card-text">Подзадачи: </h5>
+        <flexbox id="subtasks-container"> 
+            <button id="btn-add-subtask" class="w-100 btn btn-lg btn-primary"> Добавить новую подзадачу</button>
+        </flexbox>
+    </div>
+</div>
+
+
+
+{{!-- {{#if is_lead}} <button id="btn-add-task" class="w-100 btn btn-lg btn-primary"> Добавить новую подзадачу</button> {{/if}} --}}

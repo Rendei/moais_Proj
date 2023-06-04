@@ -1,0 +1,73 @@
+ul li{
+    list-style: none;
+    display: inline-flex;
+    .nav-link{
+        height: 25px;
+        padding: 0px 10px;
+    }
+    .nav-link:hover{
+        background-color: rgba($color: #8db6e6, $alpha: 0.15);
+        cursor: pointer;
+        
+    }
+    img:hover{
+        cursor: pointer;
+    }
+}
+
+
+.d-flex{
+    img{
+        max-height: calc(60px - (0.25rem * 2));
+        padding-bottom: 0px;
+    }
+}
+
+#username-text{
+    margin-left: 15px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#bell-btn:enabled{
+    border: 0px;
+}
+
+body{
+    padding-top: 10.5rem;
+}
+
+.white-bg{
+    background-color: white;
+}
+
+.card-margin{
+    margin: 30px 0px;
+}
+
+.task-card{
+    max-width: 70%;
+    margin: 0px 10px;
+}
+
+#tasks-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+
+.container{
+    h1{
+        margin-left: 15px;
+    }
+}
+
+#projects-container{
+    div{
+        flex-basis: 30%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

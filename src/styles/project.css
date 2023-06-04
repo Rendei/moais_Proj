@@ -1,0 +1,25 @@
+
+#project-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.project {
+flex-basis: 100%;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+}
+
+
+#tasks-container{
+  flex-flow: wrap;
+}
+
+.task-card {
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

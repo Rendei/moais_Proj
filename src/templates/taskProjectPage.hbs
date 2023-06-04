@@ -1,0 +1,14 @@
+{{#each tasks}}
+<div class="card card-margin task-card">
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">Дедлайн этого задания: {{deadline}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Текущий прогресс выполнения задания: {{progress}}</li>
+    </ul>
+    <div class="card-body">
+        <a id="{{task_id}}" href="task.html" class="card-link subtask-link" style="font-size: 14px">Перейти к данному заданию</a>
+    </div>
+</div>
+{{/each}}

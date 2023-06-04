@@ -1,0 +1,30 @@
+
+#subtask-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.task {
+flex-basis: 100%;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+}
+
+
+#subtasks-container{
+  display: flex;
+  flex-flow: wrap;
+}
+
+.task-card {
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-margin{
+    margin: 0px 15px 5px 15px;
+}

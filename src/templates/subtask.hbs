@@ -1,0 +1,16 @@
+{{#each subtasks}}
+<div class="card card-margin task-card">
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        {{!-- <li class="list-group-item">Текущий прогресс выполнения подзадания: {{progress}}</li> --}}
+        {{#if is_lead}} <li class="list-group-item">Эту подзадачу выполняет: {{worker}}</li>  {{/if}}
+    </ul>
+    <div class="card-body">
+        <input type="file" class="form-control" id="customFile">
+    </div>
+    <button class="btn btn-success btn-margin" style="font-size: 14px">Сдать задание</a>
+
+</div>
+{{/each}}

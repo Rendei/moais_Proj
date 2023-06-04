@@ -1,0 +1,17 @@
+{{#each projects}}
+    <div class="card card-margin task-card project">
+        <div class="card-body" style="height: 10rem;">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">Процент выполнения проекта: {{progress}}</p>
+            <p class="card-text">Предметная область проекта: {{subj_area}}</p>
+            <p class="card-text">Участники проекта:
+            <ul class="list-group list-group-flush">
+                {{#each this.members}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+            {{#if is_lead}} <p><b>Вы являетесь лидером этого проекта</b></p>{{/if}}
+            <a id="{{id_proj}}" href="project.html" class="card-link project-link" style="font-size: 14px">Перейти к данному проекту</a>
+        </div>
+    </div>
+{{/each}}

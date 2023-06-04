@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ."
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7",
+    "pg": "^8.10.0",
+    "querystring": "^0.2.1",
+    "superagent": "^8.0.9"
+  },
+  "name": "site",
+  "version": "1.0.1",
+  "description": "aboba",
+  "author": "ars",
+  "license": "ISC",
+  "devDependencies": {
+    "@partiellkorrekt/parcel-transformer-handlebars": "^1.0.3",
+    "parcel": "^2.8.3",
+    "parcel-transformer-hbs": "^1.0.4"
+  },
+  "keywords": []
+}

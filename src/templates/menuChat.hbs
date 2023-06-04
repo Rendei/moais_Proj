@@ -1,0 +1,11 @@
+{{#each chats}}
+<a href="#" class="list-group-item list-group-item-action border-0">
+    
+    <div class="d-flex align-items-start menu-chat">
+        <div class="flex-grow-1 ml-3 card" style="height:3rem;">
+            <h3>{{name}}</h3>
+        </div>
+        <div class="badge bg-success float-right">{{unchecked_messages}}</div>
+    </div>
+</a>
+{{/each}}
