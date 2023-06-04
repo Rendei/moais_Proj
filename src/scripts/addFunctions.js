@@ -1,5 +1,5 @@
-const url = 'http://localhost:5050';
-
+//const url = 'http://localhost:5050';
+const url = 'https://glitch.com/~project-backend';
 
 export async function addProjectTask(id_proj, name, deadline){
     let response = await fetch(url+"/logged/add/task", {

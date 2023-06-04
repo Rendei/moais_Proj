@@ -1,5 +1,5 @@
-let url = 'http://localhost:5050';
-
+//let url = 'http://localhost:5050';
+const url = 'https://glitch.com/~project-backend';
 document.getElementById('add-project').addEventListener('click', createProject);
 
 

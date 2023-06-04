@@ -1,6 +1,7 @@
 import { checkUserLogin } from "./loginFunctions";
 
-const url = 'http://localhost:5050';
+//const url = 'http://localhost:5050';
+const url = 'https://glitch.com/~project-backend';
 
 
 const username = document.getElementById("username-text");
