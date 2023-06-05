@@ -7,9 +7,11 @@ import * as projectSource from "../templates/project.hbs";
 import * as taskSource from "../templates/taskProjectPage.hbs";
 
 checkUserLogin().then((result) => { 
-  console.log("123");
+  console.log(result);
   loadProjectID().then(res => {
+    console.log(res);
     loadProject(res.id).then(projData => {
+      console.log(projData);
       document.getElementById("project-container").insertAdjacentHTML("afterbegin",generateHTML(projectSource,projData.project[0]));
       loadProjectTasks(res.id).then(taskData => {
         if (taskData.tasks.length > 0)
