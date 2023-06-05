@@ -6,6 +6,8 @@ import * as projectSource from "../templates/project.hbs";
 //import * as taskData from "../../data/projectTask.json";
 import * as taskSource from "../templates/taskProjectPage.hbs";
 
+const url = 'https://project-backend.glitch.me';
+
 checkUserLogin().then((result) => { 
   console.log(result);
   loadProjectID().then(res => {
@@ -81,10 +83,10 @@ function validateName(form){
 
 
 function validateDate(form){
-    re = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/;
+    let regEx = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/;
 
     if(form.date.value != "") {
-      if(regs = form.date.value.match(re)) {
+      if(regs = form.date.value.match(regEx)) {
         // День должен находиться в интервале от 1 до 31
         if(regs[1] < 1 || regs[1] > 31) {
           alert("Неправлильное значение дня: " + regs[1]);
@@ -120,7 +122,7 @@ function validateDate(form){
 
 async function loadTaskIDOnServer(){
   //alert(this.id);
-  fetch('http://localhost:5050/logged/task/id', {
+  fetch(url + '/logged/task/id', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json;charset=utf-8'
