@@ -92,7 +92,8 @@ function validateDate(form){
     let regEx = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/;
 
     if(form.date.value != "") {
-      if(regs = form.date.value.match(regEx)) {
+      let regs = form.date.value.match(regEx);
+      if(regs) {
         // День должен находиться в интервале от 1 до 31
         if(regs[1] < 1 || regs[1] > 31) {
           alert("Неправлильное значение дня: " + regs[1]);
