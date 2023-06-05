@@ -5,8 +5,14 @@ import { checkUserLogin } from "./loginFunctions.js";
 import * as projectSource from "../templates/project.hbs";
 //import * as taskData from "../../data/projectTask.json";
 import * as taskSource from "../templates/taskProjectPage.hbs";
-
 const url = 'https://project-backend.glitch.me';
+
+var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+var toastList = toastElList.map(function (toastEl) {
+  return new bootstrap.Toast(toastEl);
+});
+
+
 
 checkUserLogin().then((result) => { 
   console.log(result);
@@ -55,8 +61,8 @@ function add(){
         date = date[2]+'.'+date[1]+'.'+date[0];
         addProjectTask(res.id, addForm.name.value, date).then((ans) => {
           if (ans.done){
-            alert("Задача успешно добавлена");
-            window.location.reload();
+            toastList[0].show();
+            //window.location.reload();
           }
           else
             alert("Ошибка добавления задачи");
