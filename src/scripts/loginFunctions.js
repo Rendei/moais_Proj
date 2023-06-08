@@ -1,4 +1,5 @@
-const url = 'http://localhost:5050';
+//const url = 'http://localhost:5050';
+const url = 'https://project-backend.glitch.me';
 
 export async function checkUserLogin(){
     let response = await fetch(url+'/logged/user', {

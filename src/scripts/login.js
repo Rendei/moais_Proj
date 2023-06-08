@@ -1,7 +1,8 @@
 
 import { checkUserLogin } from "./loginFunctions";
 
-let url = 'http://localhost:5050';
+//let url = 'http://localhost:5050';
+const url = 'https://project-backend.glitch.me';
 
 const loginButton = document.getElementById('loginButton');
 loginButton.addEventListener("click", login);

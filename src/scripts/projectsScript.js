@@ -4,6 +4,8 @@ import { loadProjects } from "./loadFunctions";
 import { checkUserLogin } from "./loginFunctions";
 import * as projectSource from "../templates/projects.hbs";
 
+const url = 'https://project-backend.glitch.me';
+
 checkUserLogin().then((result) => {
     loadProjects(result.user.id).then(projData => {
       document.getElementById("projects-container").insertAdjacentHTML("afterbegin",generateHTML(projectSource,projData));
@@ -18,7 +20,7 @@ checkUserLogin().then((result) => {
 
 async function loadProjectIDOnServer(){
   //alert(this.id);
-  fetch('http://localhost:5050/logged/project/id', {
+  fetch(url + '/logged/project/id', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json;charset=utf-8'

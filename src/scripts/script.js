@@ -5,6 +5,8 @@ import * as taskSource from "../templates/taskMainPage.hbs";
 import { checkUserLogin } from "./loginFunctions";
 import * as projectSource from "../templates/projects.hbs";
 
+const url = 'https://project-backend.glitch.me';
+
 checkUserLogin().then((result) => {
 
     loadUserTasks(result.user.id).then(taskData =>{
@@ -46,7 +48,7 @@ checkUserLogin().then((result) => {
 
 async function loadProjectIDOnServer(){
   // alert(this.id);
-    fetch('http://localhost:5050/logged/project/id', {
+    fetch(url + '/logged/project/id', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -57,7 +59,7 @@ async function loadProjectIDOnServer(){
 
 async function loadTaskIDOnServer(){
 //alert(this.id);
-fetch('http://localhost:5050/logged/task/id', {
+fetch(url + '/logged/task/id', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json;charset=utf-8'
