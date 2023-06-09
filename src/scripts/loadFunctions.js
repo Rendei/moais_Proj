@@ -146,3 +146,21 @@ export async function loadTaskSubtasks(taskID){
         alert("Ошибка загрузки заданий");
     }
 };
+
+export async function updateUsername(name){
+    let response = await fetch(url+"/logged/profile/name", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+          },
+        body: JSON.stringify({name: name}) 
+    });
+    try{
+        let result = await response.json();
+       // console.log(result);
+        return result;
+    }
+    catch(e){
+        alert("Ошибка смены имени");
+    }
+};
